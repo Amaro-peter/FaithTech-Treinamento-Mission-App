@@ -2,6 +2,7 @@ import { Box, Text, Container, Flex, VStack, Image } from "@chakra-ui/react"
 import { useState } from "react"
 import Login from "../../../components/AuthFormsComponents/Login"
 import SignUp from "../../../components/AuthFormsComponents/SignUp"
+import { Link } from "react-router-dom"
 
 function AuthDonorForm() {
   const [isLogin, setIsLogin] = useState(true)
@@ -95,14 +96,16 @@ function AuthDonorForm() {
                 marginTop={7}
                 w={"full"}
                 >
-                  <Text
-                  color={"orange.700"}
-                  fontSize={"20px"}
-                  fontFamily={"Inter, sans-serif"}
-                  cursor={"pointer"}
-                  >
-                    Esqueceu a senha?
-                  </Text>
+                  <Link to={"/resetPassword"}>
+                    <Text
+                    color={"orange.700"}
+                    fontSize={"20px"}
+                    fontFamily={"Inter, sans-serif"}
+                    cursor={"pointer"}
+                    >
+                      Esqueceu a senha?
+                    </Text>
+                  </Link>
                 </Flex>
               ) : (null)}
 
@@ -134,6 +137,35 @@ function AuthDonorForm() {
                   {isLogin ? "Cadastre-se" : "Log in"}
                 </Box>
               </Flex>
+            </Box>
+
+            <Box
+            border={"1px solid black"}
+            borderRadius={4}
+            padding={1}
+            >
+              <VStack alignItems={"center"} justifyContent={"center"}>
+                <Text 
+                color={"black"}
+                fontSize={20}
+                fontFamily={"Inter, sans-serif"}
+                cursor={"pointer"}
+                >
+                  Missionário ou projeto social?
+                </Text>
+                <Box mx={2}>
+                  <Link to={"/landingPage"}>
+                    <Text
+                    color={"orange.600"}
+                    fontSize={20}
+                    fontFamily={"Inter, sans-serif"}
+                    cursor={"pointer"}
+                    >
+                      Página inicial
+                    </Text>
+                  </Link>
+                </Box>
+              </VStack>
             </Box>
           </VStack>
         </VStack>

@@ -5,6 +5,7 @@ import PageLayout from "./Layout/PageLayout/PageLayout"
 import AuthDonorForm from "./Pages/AuthForms/AuthDonorPages/AuthDonorForm"
 import AuthMissionaryForm from "./Pages/AuthForms/AuthMissionaryPages/AuthMissionaryForm"
 import AuthSocialProjectForm from "./Pages/AuthForms/AuthSocialProjectPages/AuthSocialProjectForm"
+import ResetPassword from "./Pages/AuthForms/ResetPassword/ResetPassword"
 
 
 function App () {
@@ -17,6 +18,7 @@ function App () {
           <Route path="/donorSignPage" element={<AuthDonorForm />} />
           <Route path="/missionarySignPage" element={<AuthMissionaryForm />} />
           <Route path="/socialProjectSignPage" element={<AuthSocialProjectForm />} />
+          <Route path="/resetPassword" element={<ResetPassword />} />
         </Routes>
       </PageLayout>  
     </>
