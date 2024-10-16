@@ -1,4 +1,4 @@
-import HomePage from "./Pages/HomePage/HomePage"
+import MissionaryHomePage from "./Pages/HomePagesFolder/MissionaryHomePage/MissionaryHomePage"
 import LandingPage from "./Pages/LandingPage/LandingPage"
 import {Routes, Route} from 'react-router-dom'
 import PageLayout from "./Layout/PageLayout/PageLayout"
@@ -13,7 +13,7 @@ function App () {
     <>
       <PageLayout>
         <Routes>
-          <Route path="/" element={<HomePage />} />
+          <Route path="/" element={<MissionaryHomePage />} />
           <Route path="/landingPage" element={<LandingPage />} />
           <Route path="/donorSignPage" element={<AuthDonorForm />} />
           <Route path="/missionarySignPage" element={<AuthMissionaryForm />} />

@@ -26,32 +26,32 @@ function AuthMissionaryForm() {
           </Box>
           <VStack spacing={4} align={"stretch"}>
             <Box
-            border={"1px solid black"}
-            borderRadius={4}
-            padding={5}
-            >
-              <Flex
-              alignItems={"center"}
-              justifyContent={"center"}
+              border={"1px solid black"}
+              borderRadius={4}
+              padding={2}
               >
-                <Box
-                mx={2}
-                fontFamily={"Inter, sans-serif"}
-                fontSize={"20px"}
+                <VStack
+                alignItems={"center"}
+                justifyContent={"center"}
                 >
-                  {isLogin ? "Quer fazer parte da plataforma?" : "Já faz parte?"}
-                </Box>
-                <Box
-                color={"orange.700"}
-                fontFamily={"Inter, sans-serif"}
-                fontSize={"20px"}
-                cursor={"pointer"}
-                onClick={() => setIsLogin(!isLogin)}
-                >
-                  {isLogin ? "Cadastre-se" : "Log in"}
-                </Box>
-              </Flex>
-            </Box>
+                  <Box
+                  mx={2}
+                  fontFamily={"Inter, sans-serif"}
+                  fontSize={"20px"}
+                  >
+                    {isLogin ? "Quer fazer parte da plataforma?" : "Já faz parte?"}
+                  </Box>
+                  <Box
+                  color={"orange.700"}
+                  fontFamily={"Inter, sans-serif"}
+                  fontSize={"20px"}
+                  cursor={"pointer"}
+                  onClick={() => setIsLogin(!isLogin)}
+                  >
+                    {isLogin ? "Cadastre-se" : "Log in"}
+                  </Box>
+                </VStack>
+              </Box>
 
             <Box
             border={"1px solid black"}
